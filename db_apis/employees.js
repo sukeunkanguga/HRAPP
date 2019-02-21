@@ -11,14 +11,9 @@ const baseQuery =
     gender "gender",
     birth_date "birth_date",
     email "email",
-    phone1 "phone",
-    phone2 "mobile",
-    address1 "address",
-    address2 "address2",
-    nationality "nationality",
-    tin "tin",
-    ssnit "ssnit",
-    tier2 "tier2"
+    phone "phone",
+    address "address",
+    nationality "nationality"
   from employees`;
 
 async function find(context) {
@@ -48,14 +43,9 @@ const createSql =
     gender,
     birth_date,
     email,
-    phone1,
-    phone2,
-    address1,
-    address2,
-    nationality,
-    tin,
-    ssnit,
-    tier2    
+    phone,
+    address,
+    nationality
   ) values (
   	:pkid,
   	:staffid,
@@ -65,14 +55,9 @@ const createSql =
     :gender,
     :birth_date,
     :email,
-    :phone1,
-    :phone2,
-    :address1,
-    :address2,
-    :nationality,
-    :tin,
-    :ssnit,
-    :tier2
+    :phone,
+    :address,
+    :nationality
     )
   returning staffid
   into :staffid`;
@@ -105,14 +90,9 @@ const updateSql =
     gender = :gender,
     birth_date = :birth_date,
     email = :email,
-    phone1 = :phone1,
-    phone2 = :phone2,
-    address1 = :address1,
-    address2 = :address2,
+    phone = :phone,
+    address = :address,
     nationality = :nationality,
-    tin = :tin,
-    ssnit = :ssnit,
-    tier2 = :tier2
   where staffid = :staffid`;
 
 async function update(emp) {

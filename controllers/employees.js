@@ -28,6 +28,7 @@ function getEmployeeFromRec(req) {
 
   const employee = {
   	pkid: req.body.pkid,
+    usrid: req.body.usrid,
   	staffid: req.body.staffid,
     first_name: req.body.first_name,
     last_name: req.body.last_name,
@@ -35,14 +36,9 @@ function getEmployeeFromRec(req) {
     gender: req.body.gender,
     birth_date: req.body.birth_date,
     email: req.body.email,
-    phone1: req.body.phone,
-    phone2: req.body.mobile,
-    address1: req.body.address,
-    address2: req.body.address2,
-    nationality: req.body.nationality,
-    tin: req.body.tin,
-    ssnit: req.body.ssnit,
-    tier2: req.body.tier2
+    phone: req.body.phone,
+    address: req.body.address,
+    nationality: req.body.nationality
   };
 
   return employee;
